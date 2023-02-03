@@ -1,0 +1,14 @@
+{
+    "name": "Rust Audit",
+    "description": "A workflow for Rust, includes Audit",
+    "iconName": "example-icon",
+    "categories": [
+      "Rust",
+      "Audit"
+    ],
+    "filePatterns": [
+      "Cargo.toml",
+      "Cargo.lock"
+    ]
+  }
+  
