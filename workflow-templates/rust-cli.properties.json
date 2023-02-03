@@ -1,0 +1,14 @@
+{
+  "name": "Rust Cli",
+  "description": "A workflow for Rust Clis, including binary distribution, builds, and audit.",
+  "iconName": "example-icon",
+  "categories": [
+    "Rust",
+    "Cli",
+    "Binary",
+  ],
+  "filePatterns": [
+    "Cargo.toml",
+    "Cargo.lock",
+  ]
+}
