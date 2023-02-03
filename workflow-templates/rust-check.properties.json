@@ -1,0 +1,14 @@
+{
+    "name": "Rust Check",
+    "description": "A workflow for Rust applications, run tests",
+    "iconName": "example-icon",
+    "categories": [
+      "Rust",
+      "Check"
+    ],
+    "filePatterns": [
+      "Cargo.toml",
+      "Cargo.lock"
+    ]
+  }
+  

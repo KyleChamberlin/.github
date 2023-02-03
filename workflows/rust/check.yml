@@ -1,12 +1,11 @@
 name: Validate Rust Source
 
 on:
-  push:
-    branches:
-      - "main"
-  pull_request:
-  workflow_dispatch:
   workflow_call:
+    secrets:
+      GITHUB_TOKEN:
+        description: The GITHUB_TOKEN
+        required: true
 
 env:
   CARGO_TERM_COLOR: always
@@ -36,8 +35,8 @@ jobs:
           | clippy-sarif
           | tee clippy-results.sarif
           | sarif-fmt
-        continue-on-error: true
-      - name: upload clippy results
+      - if: ${{ failure() }}
+        name: upload clippy results
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: clippy-results.sarif

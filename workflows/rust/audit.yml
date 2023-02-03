@@ -1,15 +1,11 @@
 name: "Audit Dependencies"
 
 on:
-  push:
-    paths:
-      - '.github/workflows/audit.yml'
-      - '**/Cargo.toml'
-      - '**/Cargo.lock'
-      - '**/audit.toml'
-  schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+  workflow_call:
+    secrets:
+      GITHUB_TOKEN:
+        description: The GITHUB_TOKEN
+        required: true
 
 permissions: read-all
 
