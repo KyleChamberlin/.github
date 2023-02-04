@@ -4,6 +4,7 @@ on:
   workflow_call:
 
 permissions:
+  id-token: write
   issues: write
   security-events: write
   actions: read
@@ -16,7 +17,6 @@ permissions:
   pull-requests: read
   repository-projects: read
   statuses: read
-  id-token: read
 
 jobs:
   audit:
