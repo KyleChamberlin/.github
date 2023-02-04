@@ -7,8 +7,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  
+
 jobs:
   audit:
     uses: KyleChamberlin/.github/.github/workflows/rust-check.yml@main
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

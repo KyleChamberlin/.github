@@ -12,9 +12,8 @@ on:
   workflow_dispatch:
 
 permissions: read-all
+  issues: write
 
 jobs:
   audit:
     uses: KyleChamberlin/.github/.github/workflows/rust-audit.yml@main
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

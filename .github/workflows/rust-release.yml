@@ -8,10 +8,6 @@ on:
         default: 'bin'
         required: true
         type: string
-    secrets:
-      GITHUB_TOKEN:
-        description: The GITHUB_TOKEN
-        required: true
 
 permissions:
   packages: write
