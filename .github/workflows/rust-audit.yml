@@ -3,7 +3,20 @@ name: "Audit Dependencies"
 on:
   workflow_call:
 
-permissions: read-all
+permissions:
+  issues: write
+  security-events: write
+  actions: read
+  checks: read
+  contents: read
+  deployments: read
+  discussions: read
+  packages: read
+  pages: read
+  pull-requests: read
+  repository-projects: read
+  statuses: read
+  id-token: read
 
 jobs:
   audit:
