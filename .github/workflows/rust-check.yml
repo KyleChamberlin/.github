@@ -46,7 +46,7 @@ jobs:
       fail-fast: true
       matrix:
         toolchain: [stable]
-        os: [ubuntu-latest, ubuntu-20.04, windows-latest, windows-2019, macos-latest, macos-11]
+        os: [ubuntu-latest, windows-latest, macos-latest]
         experimental: [false]
         include:
           - toolchain: beta
@@ -59,7 +59,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: ${{ matrix.toolchain }}
