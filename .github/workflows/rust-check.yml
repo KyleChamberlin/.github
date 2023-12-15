@@ -33,7 +33,7 @@ jobs:
           | sarif-fmt
       - if: ${{ failure() }}
         name: upload clippy results
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: clippy-results.sarif
           category: lint
